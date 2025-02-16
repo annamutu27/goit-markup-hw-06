@@ -32,7 +32,7 @@
               <a href="./index.html" class="header-nav-link current">Studio</a>
             </li>
             <li class="header-nav-item">
-              <a href="" class="header-nav-link">Portfolio</a>
+              <a href="#port-id" class="header-nav-link">Portfolio</a>
             </li>
             <li class="header-nav-item">
               <a href="" class="header-nav-link">Contacts</a>
@@ -53,6 +53,85 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="btn-menu-close" type="button" data-menu-close>
+            <svg class="btn-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-nav-list">
+              <li class="mobile-menu-nav-item">
+                <a href="./index.html" class="mobile-menu-nav-link current"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-menu-nav-item">
+                <a href="" class="mobile-menu-nav-link">Portfolio</a>
+              </li>
+              <li class="mobile-menu-nav-item">
+                <a href="" class="mobile-menu-nav-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="mobile-menu-address">
+            <ul class="mobile-menu-address-list">
+              <li class="mobile-menu-address-item">
+                <a href="tel:+110001111111" class="mobile-menu-address-link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-menu-address-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu-address-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mobile-menu-soc-list">
+            <li class="mobile-menu-soc-item">
+              <a href="" class="mobile-menu-soc-link">
+                <svg class="mobile-menu-soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-item">
+              <a href="" class="mobile-menu-soc-link"
+                ><svg class="mobile-menu-soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-item">
+              <a href="" class="mobile-menu-soc-link"
+                ><svg class="mobile-menu-soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-item">
+              <a href="" class="mobile-menu-soc-link"
+                ><svg class="mobile-menu-soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -123,13 +202,17 @@
       </section>
 
       <section class="team section">
-        <div class="container">
+        <div class="container team-container">
           <h2 class="team-title section-h-second">Our Team</h2>
           <ul class="team-list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team-desk-1-1.jpg 1x,
+                  ./images/team-desk-1-2.jpg 2x
+                "
                 class="team-image"
-                src="./images/member1.jpg"
+                src="./images/team-desk-1-1.jpg"
                 alt="member1"
                 width="264"
                 height="260"
@@ -171,8 +254,12 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team-desk-2-1.jpg 1x,
+                  ./images/team-desk-2-2.jpg 2x
+                "
                 class="team-image"
-                src="./images/member2.jpg"
+                src="./images/team-desk-2-1.jpg"
                 alt="member2"
                 width="264"
                 height="260"
@@ -214,8 +301,12 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team-desk-3-1.jpg 1x,
+                  ./images/team-desk-3-2.jpg 2x
+                "
                 class="team-image"
-                src="./images/member3.jpg"
+                src="./images/team-desk-3-1.jpg"
                 alt="member3"
                 width="264"
                 height="260"
@@ -257,8 +348,12 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team-desk-4-1.jpg 1x,
+                  ./images/team-desk-4-2.jpg 2x
+                "
                 class="team-image"
-                src="./images/member4.jpg"
+                src="./images/team-desk-4-1.jpg"
                 alt="member4"
                 width="264"
                 height="260"
@@ -302,19 +397,42 @@
         </div>
       </section>
 
-      <section class="port section">
+      <section class="port section" id="port-id">
         <div class="container">
           <h2 class="port-title section-h-second">Our Portfolio</h2>
           <ul class="port-list">
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-cover-image"
-                  src="./images/img-1.jpg"
-                  alt="Apps for bank"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-1-1.jpg 1x,
+                      ./images/desktop/port-desk-1-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-1-1.jpg 1x,
+                      ./images/tablet/port-tab-1-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-1-1.jpg 1x,
+                      ./images/mobile/port-mob-1-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-1-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -328,13 +446,36 @@
             </li>
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-item-image"
-                  src="./images/img-2.jpg"
-                  alt="Phone code"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-2-1.jpg 1x,
+                      ./images/desktop/port-desk-2-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-2-1.jpg 1x,
+                      ./images/tablet/port-tab-2-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-2-1.jpg 1x,
+                      ./images/mobile/port-mob-2-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-2-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -350,13 +491,36 @@
             </li>
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-item-image"
-                  src="./images/img-3.jpg"
-                  alt="Laptop"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-3-1.jpg 1x,
+                      ./images/desktop/port-desk-3-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-3-1.jpg 1x,
+                      ./images/tablet/port-tab-3-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-3-1.jpg 1x,
+                      ./images/mobile/port-mob-3-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-3-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -372,13 +536,36 @@
             </li>
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-item-image"
-                  src="./images/img-4.jpg"
-                  alt="Automobile"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-4-1.jpg 1x,
+                      ./images/desktop/port-desk-4-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-4-1.jpg 1x,
+                      ./images/tablet/port-tab-4-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-4-1.jpg 1x,
+                      ./images/mobile/port-mob-4-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-4-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -392,13 +579,36 @@
             </li>
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-item-image"
-                  src="./images/img-5.jpg"
-                  alt="Theme phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-5-1.jpg 1x,
+                      ./images/desktop/port-desk-5-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-5-1.jpg 1x,
+                      ./images/tablet/port-tab-5-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-5-1.jpg 1x,
+                      ./images/mobile/port-mob-5-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-5-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -414,13 +624,36 @@
             </li>
             <li class="port-item">
               <div class="port-item-cover">
-                <img
-                  class="port-item-image"
-                  src="./images/img-6.jpg"
-                  alt="Gerl smyle"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/desktop/port-desk-6-1.jpg 1x,
+                      ./images/desktop/port-desk-6-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/tablet/port-tab-6-1.jpg 1x,
+                      ./images/tablet/port-tab-6-2.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/mobile/port-mob-6-1.jpg 1x,
+                      ./images/mobile/port-mob-6-2.jpg 2x
+                    "
+                  />
+                  <img
+                    class="port-cover-image"
+                    src="./images/desktop/port-desk-6-1.jpg"
+                    alt="Apps for bank"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="port-cover-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -505,7 +738,7 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
@@ -598,5 +831,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
